@@ -10,7 +10,7 @@ def crear_fichero(request: dict):
         self (FileHashController)
         request (dict): body de la petición
     """
-    with open(request['nombre'], 'w') as f:
+    with open("/tmp/" + request['nombre'], 'w') as f:
         f.write(base64.b64decode(request['archivo']).decode("utf-8"))
 
 
@@ -34,10 +34,10 @@ def generar_md5_from_file(request: dict):
     """
     crear_fichero(request)
 
-    with open(request['nombre'], mode='rb') as f:
+    with open("/tmp/" + request['nombre'], mode='rb') as f:
         hash_file = (hashlib.md5(f.read()).hexdigest())
 
-    eliminar_fichero(request['nombre'])
+    #eliminar_fichero(request['nombre'])
     return {
         'hash': hash_file
     }
@@ -53,10 +53,10 @@ def generar_sha1_from_file(request: dict):
     """
     crear_fichero(request)
 
-    with open(request['nombre'], mode='rb') as f:
+    with open("/tmp/" + request['nombre'], mode='rb') as f:
         hash_file = (hashlib.sha1(f.read()).hexdigest())
 
-    eliminar_fichero(request['nombre'])
+    #eliminar_fichero(request['nombre'])
     return {
         'hash': hash_file
     }
@@ -72,10 +72,10 @@ def generar_sha256_from_file(request: dict):
     """
     crear_fichero(request)
 
-    with open(request['nombre'], mode='rb') as f:
+    with open("/tmp/" + request['nombre'], mode='rb') as f:
         hash_file = (hashlib.sha256(f.read()).hexdigest())
 
-    eliminar_fichero(request['nombre'])
+    #eliminar_fichero(request['nombre'])
     return {
         'hash': hash_file
     }
