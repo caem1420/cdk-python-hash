@@ -1,0 +1,14 @@
+__pycache__/
+
+.idea/
+
+venv/
+
+*.pdf
+*.txt
+*.exe
+*.rar
+*.zip
+*.7zip
+*.tar
+.vscode/

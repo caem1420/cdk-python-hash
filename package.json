@@ -1,0 +1,23 @@
+{
+  "name": "cdkv2_javascript_template",
+  "version": "0.1.0",
+  "bin": {
+    "cdkv2_javascript_template": "bin/cdkv2_javascript_template.js"
+  },
+  "scripts": {
+    "build": "echo \"The build step is not required when using JavaScript!\" && exit 0",
+    "cdk": "cdk",
+    "test": "jest"
+  },
+  "devDependencies": {
+    "aws-cdk": "2.37.1",
+    "esbuild": "^0.14.53",
+    "eslint": "^8.21.0",
+    "eslint-config-google": "^0.14.0",
+    "jest": "^27.5.1"
+  },
+  "dependencies": {
+    "aws-cdk-lib": "2.37.1",
+    "constructs": "^10.0.0"
+  }
+}

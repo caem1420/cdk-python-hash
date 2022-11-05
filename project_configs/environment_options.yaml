@@ -1,0 +1,18 @@
+project_name: "HASHGENERATOR"
+framework_version: 1
+
+account: "952515531132"
+region: "us-east-1"
+environment: "dev"
+
+lambda_parameters:
+  function_name: "HASHGENERATOR"
+  description: "AuthManager"
+  runtime: '3.8'
+  logs_retention_period: "six_months"
+  memory_size: 128
+  timeout: 30
+  deployment_config: "allOnce"
+tags:
+  test: "true"
+  Project: "TestHash"
